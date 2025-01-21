@@ -8,6 +8,7 @@ namespace Lab2_
 {
     internal class Program
     {
+        // Case 1: Store text file in a list
         static IList<string> StoreWordInList(string fileName)
         {
             IList<string> words = new List<string>();
@@ -24,6 +25,7 @@ namespace Lab2_
             return words;
         }
 
+        // Case 2: Perform a bubble sort algorithm
         static IList<string> BubbleSort(IList<string> words)
         {
             var time = Stopwatch.StartNew(); // count the time process
@@ -48,6 +50,7 @@ namespace Lab2_
             return words;
         }
 
+        // Case 3: Perform a LINQ sort algorithm
         static IList<string> LINQSort(IList<string> words)
         {
             var time = Stopwatch.StartNew();
@@ -61,15 +64,6 @@ namespace Lab2_
         {
             IList<string> words = null;
             bool exit = false;
-
-            static void emptyString (string words)
-            {
-                if (words == null)
-                {
-                    Console.WriteLine("Please import Words.txt from case 1 \n");
-                    return;
-                }
-            }
 
             while (!exit)
             {
@@ -212,7 +206,7 @@ namespace Lab2_
                         break;
 
                     default:
-                        Console.WriteLine("Invalid! Please select again\n");
+                        Console.WriteLine("Invalid! Please select from 1 to 9\n");
                         break;
                 }
             }
