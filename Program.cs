@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System;
 using System.IO; // Convert text file to store in a List
 using System.Diagnostics; // Process time
-
 namespace Lab2_
 {
     internal class Program
